@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa en franja pequeña</title>
+  <title>Mapa franja pequeña - Reservas 2025</title>
   <style>
     html, body {
       margin: 0; padding: 0; height: 100%;
+      overflow: hidden;
     }
     iframe {
       width: 100%;
-      height: 150px;  /* ajustá la altura a lo que quieras */
+      height: 150px; /* Altura de franja chica */
       border: none;
       display: block;
     }
@@ -19,7 +20,8 @@
   <iframe
     src="https://api.mapbox.com/styles/v1/liviamarquez/cmdq9ar1j008r01qne6b8fwew.html?title=view&access_token=pk.eyJ1IjoibGl2aWFtYXJxdWV6IiwiYSI6ImNsd3V3czgyNjBsZnoyaXE0bG9mc2ZlZXIifQ.oyCPtryJzr75lcwN_GmnxQ&zoomwheel=true&fresh=true#10.34/-34.7763/-58.5662"
     title="Mapa franja pequeña"
-    allowfullscreen>
-  </iframe>
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
 </body>
 </html>
