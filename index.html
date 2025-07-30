@@ -1,44 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mapa sin faja blanca</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <title>Mapa Franja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: white;
-      height: 100%;
+      height: auto;
+      background: #000; /* O blanco si preferís */
     }
-    #map {
+
+    .mapa {
       width: 100%;
-      height: 150px;
+      height: 120px; /* Podés ajustar esta altura a gusto */
+      overflow: hidden;
     }
-    .mapboxgl-ctrl-logo {
-      display: none !important;
-    }
-    .mapboxgl-ctrl-attrib {
-      font-size: 10px;
-      padding: 2px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div id="map"></div>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibGl2aWFtYXJxdWV6IiwiYSI6ImNsd3V3czgyNjBsZnoyaXE0bG9mc2ZlZXIifQ.oyCPtryJzr75lcwN_GmnxQ';
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/liviamarquez/cmdq9ar1j008r01qne6b8fwew',
-      center: [-58.5662, -34.7763],
-      zoom: 10,
-      interactive: false,
-      attributionControl: true
-    });
-  </script>
+  <div class="mapa">
+    <iframe 
+      src="https://api.mapbox.com/styles/v1/liviamarquez/cmdq9ar1j008r01qne6b8fwew.html?title=false&access_token=pk.eyJ1IjoibGl2aWFtYXJxdWV6IiwiYSI6ImNsd3V3czgyNjBsZnoyaXE0bG9mc2ZlZXIifQ.oyCPtryJzr75lcwN_GmnxQ&zoomwheel=false#10.34/-34.7763/-58.5662" 
+      title="Reservas_2025">
+    </iframe>
+  </div>
 </body>
 </html>
