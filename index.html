@@ -2,25 +2,27 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mapa franja mínima con Mapbox GL JS</title>
+  <title>Mapa Franja Pequeña</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    body, html {
-      margin: 0; padding: 0; height: 150px; /* franja pequeña */
-      overflow: hidden;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #fff;
     }
     #map {
       width: 100%;
-      height: 150px;
+      height: 150px; /* Altura de la franja */
     }
-    /* Para que el crédito se vea pero no moleste mucho */
+    .mapboxgl-ctrl-logo {
+      display: none !important;
+    }
     .mapboxgl-ctrl-attrib {
       font-size: 10px !important;
-      padding: 0 4px !important;
-      bottom: 2px !important;
-      right: 2px !important;
+      padding: 2px 4px !important;
     }
   </style>
 </head>
@@ -33,6 +35,7 @@
       style: 'mapbox://styles/liviamarquez/cmdq9ar1j008r01qne6b8fwew',
       center: [-58.5662, -34.7763],
       zoom: 10,
+      interactive: false, // desactiva zoom y desplazamiento
       attributionControl: true
     });
   </script>
